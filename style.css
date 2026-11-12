@@ -1,0 +1,31 @@
+:root{--bg:#eef1ea;--card:#fbfcf8;--ink:#1b2a21;--mute:#6a7a6e;--moss:#2f5d3a;--moss2:#244a2d;--gold:#d9a21b;--chili:#b5472f;--line:#d5dccf}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 'Manrope','Noto Sans Sinhala',sans-serif}
+button,input,select{font:inherit}button{background:var(--moss);color:#fff;border:0;border-radius:6px;padding:8px 14px;font-weight:700;cursor:pointer}
+button:hover{background:var(--moss2)}button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}button.del{background:transparent;color:var(--chili);padding:4px 8px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.shell{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+aside{background:var(--moss2);color:#e8efe4;padding:22px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:4px}
+aside h1{font-size:17px;margin:0 8px 2px}aside small{margin:0 8px 18px;color:#a9c0ab}
+aside .nav{background:transparent;text-align:left;font-weight:600;color:#cfe0cf;padding:10px 12px}
+aside .nav.on{background:var(--gold);color:#241a00}aside .sp{flex:1}aside .ghost{color:#e8efe4;border-color:#4a7352}
+main{padding:26px;max-width:1200px;width:100%}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}.bar h2{margin:0;font-size:21px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.kpi b{display:block;font-size:24px;margin-top:4px}.kpi span{color:var(--mute);font-size:12px}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:18px}.chart{height:260px;position:relative}
+.stock{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.stock .sz{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
+.stock .low{color:var(--chili);font-weight:800}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px}
+th{text-align:left;background:#e3e9dc;padding:10px;font-size:12px;white-space:nowrap}td{padding:10px;border-top:1px solid var(--line)}.r{text-align:right}
+.tag{padding:2px 9px;border-radius:99px;font-size:11px;font-weight:800;background:#e3e9dc}.YES,.PAID{background:#cfe8d3;color:#1d5a2b}.NO,.PENDING{background:#f3d3cb;color:#8e3320}.free,.PARTIAL{background:#f6e6b4;color:#6b4d00}
+.empty{padding:34px;text-align:center;color:var(--mute)}
+dialog{border:0;border-radius:12px;padding:0;width:min(440px,94vw)}dialog::backdrop{background:#0008}
+dialog form{padding:20px;display:grid;gap:12px}dialog h3{margin:0}dialog label{display:grid;gap:4px;font-weight:700;font-size:12px}.row{display:flex;gap:8px;justify-content:flex-end}
+#login{min-height:100vh;display:grid;place-items:center}#login form{width:min(360px,92vw);display:grid;gap:12px}
+#toast{position:fixed;right:16px;bottom:16px;display:grid;gap:8px;z-index:9}#toast div{background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px}#toast .bad{background:var(--chili)}
+@media(max-width:800px){.shell{grid-template-columns:1fr}aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap}aside small,aside h1{width:100%}.grid2{grid-template-columns:1fr}main{padding:14px}}
+@media print{aside,.bar button,.acts,dialog{display:none!important}.shell{display:block}}
+[hidden]{display:none!important}

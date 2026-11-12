@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="si"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adceylora Eco Food ERP</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Noto+Sans+Sinhala:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+</head><body>
+<section id="login" hidden><form class="card"><h2 style="margin:0">Adceylora Eco Food</h2><p style="margin:0;color:var(--mute)">Sign in to open the system</p>
+<input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password" required><button>Sign in</button></form></section>
+<div class="shell" id="app" hidden>
+<aside><h1>Adceylora Eco Food</h1><small>Operations system</small>
+<button class="nav" data-v="dashboard">පාලන පුවරුව</button><button class="nav" data-v="procurement">අමුද්‍රව්‍ය පොත</button>
+<button class="nav" data-v="stock">පැකට් Stock</button><button class="nav" data-v="dehydration">වියළීම (Yield)</button><button class="nav" data-v="sales">විකුණුම්</button>
+<div class="sp"></div><button class="ghost" id="role">Owner view</button><button class="ghost" onclick="window.print()">Print report</button><button class="ghost" id="out">Sign out</button></aside>
+<main id="view"></main></div>
+<dialog id="modal"></dialog><div id="toast"></div>
+<script src="app.js"></script></body></html>
