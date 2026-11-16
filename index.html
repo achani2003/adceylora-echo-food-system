@@ -10,9 +10,9 @@
 <input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password" required><button>Sign in</button></form></section>
 <div class="shell" id="app" hidden>
 <aside><h1>Adceylora Eco Food</h1><small>Operations system</small>
-<button class="nav" data-v="dashboard">පාලන පුවරුව</button><button class="nav" data-v="procurement">අමුද්‍රව්‍ය පොත</button>
-<button class="nav" data-v="stock">පැකට් Stock</button><button class="nav" data-v="dehydration">වියළීම (Yield)</button><button class="nav" data-v="sales">විකුණුම්</button>
+<button class="nav" data-v="dashboard">📊 <span>පාලන පුවරුව</span></button><button class="nav" data-v="procurement">📥 <span>අමුද්‍රව්‍ය පොත</span></button>
+<button class="nav" data-v="stock">📦 <span>පැකට් Stock</span></button><button class="nav" data-v="dehydration">☀️ <span>වියළීම (Yield)</span></button><button class="nav" data-v="sales">🛍️ <span>විකුණුම්</span></button>
 <div class="sp"></div><button class="ghost" id="role">Owner view</button><button class="ghost" onclick="window.print()">Print report</button><button class="ghost" id="out">Sign out</button></aside>
-<main id="view"></main></div>
+<main><div class="top"><b>🌿 Adceylora</b><span><button class="ghost" onclick="$('#role').click()">👁 View</button><button class="ghost" onclick="$('#out').click()">Sign out</button></span></div><div id="view"></div></main></div>
 <dialog id="modal"></dialog><div id="toast"></div>
 <script src="app.js"></script></body></html>
